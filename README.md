@@ -104,27 +104,14 @@ The app leverages **React Router** for navigation and uses functional components
 
 ## **Installation**
 
-1. **Clone the repository**
-```bash
 git clone <your-repo-url>
 cd recipe-app
 
-2. **Install dependencies**
-
 npm install
-
 
 Start the development server
 
 npm run dev
-
-
-Open http://localhost:5173
- in your browser.
-
-Build for production
-
-npm run build
 
 Usage
 
@@ -144,7 +131,7 @@ See ingredients, instructions, category, and YouTube video.
 
 Navigate back using the "Back" button.
 
-Favorites Page
+# **Favorites Page**
 
 Click the heart icon to add/remove favorites.
 
@@ -179,24 +166,6 @@ RecipeCard.jsx – Reusable card component for displaying recipe info.
 
 SearchBar.jsx & Filter.jsx – Handle user input for search and filtering.
 
-Screenshots
-Home Page
-
-Recipe Details
-
-Favorites Page
-
-(Replace above links with actual screenshots of your app)
-
-Q&A / Requirements Validation
-Question	Status	Notes
-Fetch recipes dynamically?	✅ Yes	Uses fetch API to get data from TheMealDB
-Search recipes?	✅ Yes	Live search with SearchBar component
-Filter by category?	✅ Yes	Filter component fetches categories and filters recipes
-Display full recipe details?	✅ Yes	RecipeDetails page shows ingredients, instructions, category, area, and YouTube video
-Add/remove favorites?	✅ Yes	Favorites persist in localStorage
-Responsive UI?	✅ Yes	TailwindCSS grids and utility classes
-Correct API usage?	✅ Yes	Matches TheMealDB endpoints exactly
 Future Improvements
 
 Add pagination for large recipe lists.
@@ -218,4 +187,3 @@ This project is licensed under the MIT License.
 Author
 
 Kanesha K
-
