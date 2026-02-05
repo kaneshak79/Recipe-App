@@ -8,16 +8,13 @@ This project demonstrates practical React skills including component-based archi
 
 ## **Table of Contents**
 
-- [Demo](#demo)
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Reference](#api-reference)
-- [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
-- [Q&A / Requirements Check](#qa--requirements-check)
+- [Component Responsibilities](#component-responsibilites)
 - [Future Improvements](#future-improvements)
 - [License](#license)
 - [Author](#author)
@@ -106,7 +103,7 @@ Start the development server
 
 npm run dev
 
-Usage
+## **Usage**
 
 Home Page
 
@@ -132,7 +129,7 @@ View all saved favorites.
 
 Remove favorites directly from the page.
 
-API Reference
+## **API Reference**
 
 The app consumes endpoints from TheMealDB API:
 
