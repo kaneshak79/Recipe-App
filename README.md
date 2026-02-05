@@ -108,3 +108,114 @@ The app leverages **React Router** for navigation and uses functional components
 ```bash
 git clone <your-repo-url>
 cd recipe-app
+
+2. **Install dependencies**
+
+npm install
+
+
+Start the development server
+
+npm run dev
+
+
+Open http://localhost:5173
+ in your browser.
+
+Build for production
+
+npm run build
+
+Usage
+
+Home Page
+
+Browse all recipes.
+
+Search by recipe name.
+
+Filter recipes by category.
+
+Recipe Details Page
+
+Click any recipe card to view details.
+
+See ingredients, instructions, category, and YouTube video.
+
+Navigate back using the "Back" button.
+
+Favorites Page
+
+Click the heart icon to add/remove favorites.
+
+View all saved favorites.
+
+Remove favorites directly from the page.
+
+API Reference
+
+The app consumes endpoints from TheMealDB API
+:
+
+Endpoint	Description	Example
+/search.php?s={query}	Search meals by name or keyword	/search.php?s=chicken
+/filter.php?c={category}	Filter meals by category	/filter.php?c=Seafood
+/lookup.php?i={id}	Get full meal details by ID	/lookup.php?i=52772
+/categories.php	Fetch all meal categories	/categories.php
+
+
+
+Component Responsibilities:
+
+Home.jsx – Fetches and displays recipes, handles search & filter, manages favorites.
+
+RecipeDetails.jsx – Shows full recipe details including ingredients and video.
+
+Favorites.jsx – Lists user favorites with remove functionality.
+
+Navbar.jsx – Header with navigation and branding.
+
+RecipeCard.jsx – Reusable card component for displaying recipe info.
+
+SearchBar.jsx & Filter.jsx – Handle user input for search and filtering.
+
+Screenshots
+Home Page
+
+Recipe Details
+
+Favorites Page
+
+(Replace above links with actual screenshots of your app)
+
+Q&A / Requirements Validation
+Question	Status	Notes
+Fetch recipes dynamically?	✅ Yes	Uses fetch API to get data from TheMealDB
+Search recipes?	✅ Yes	Live search with SearchBar component
+Filter by category?	✅ Yes	Filter component fetches categories and filters recipes
+Display full recipe details?	✅ Yes	RecipeDetails page shows ingredients, instructions, category, area, and YouTube video
+Add/remove favorites?	✅ Yes	Favorites persist in localStorage
+Responsive UI?	✅ Yes	TailwindCSS grids and utility classes
+Correct API usage?	✅ Yes	Matches TheMealDB endpoints exactly
+Future Improvements
+
+Add pagination for large recipe lists.
+
+Implement loading skeletons during API fetch.
+
+Add error handling for failed API requests.
+
+Add ingredient-based search.
+
+Add user authentication to save favorites on the server.
+
+Deploy with Netlify/Vercel and add SEO optimizations.
+
+License
+
+This project is licensed under the MIT License.
+
+Author
+
+Kanesha K
+
