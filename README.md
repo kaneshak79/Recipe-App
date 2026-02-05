@@ -131,7 +131,7 @@ See ingredients, instructions, category, and YouTube video.
 
 Navigate back using the "Back" button.
 
-# **Favorites Page**
+## **Favorites Page**
 
 Click the heart icon to add/remove favorites.
 
@@ -141,8 +141,7 @@ Remove favorites directly from the page.
 
 API Reference
 
-The app consumes endpoints from TheMealDB API
-:
+The app consumes endpoints from TheMealDB API:
 
 Endpoint	Description	Example
 /search.php?s={query}	Search meals by name or keyword	/search.php?s=chicken
@@ -152,7 +151,7 @@ Endpoint	Description	Example
 
 
 
-Component Responsibilities:
+## **Component Responsibilities:**
 
 Home.jsx – Fetches and displays recipes, handles search & filter, manages favorites.
 
@@ -166,7 +165,7 @@ RecipeCard.jsx – Reusable card component for displaying recipe info.
 
 SearchBar.jsx & Filter.jsx – Handle user input for search and filtering.
 
-Future Improvements
+## **Future Improvements**
 
 Add pagination for large recipe lists.
 
@@ -180,10 +179,10 @@ Add user authentication to save favorites on the server.
 
 Deploy with Netlify/Vercel and add SEO optimizations.
 
-License
+## **License**
 
 This project is licensed under the MIT License.
 
-Author
+## **Author**
 
 Kanesha K
