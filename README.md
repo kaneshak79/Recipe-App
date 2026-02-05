@@ -24,13 +24,6 @@ This project demonstrates practical React skills including component-based archi
 
 ---
 
-## **Demo**
-
-*(Optional: Add your live deployment URL here if hosted)*  
-Example: [Live Demo](https://yourapp.netlify.app)
-
----
-
 ## **Project Overview**
 
 The Recipe App is designed for anyone who loves cooking or wants inspiration for meals. It provides:  
