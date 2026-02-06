@@ -1,31 +1,11 @@
 
-
-
-
-import { useEffect, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 import { HeartIcon as SolidHeartIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import { useFavorites } from "../context/FavoritesContext";   
 
 const Favorites = () => {
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem("favorites");
-      setFavorites(saved ? JSON.parse(saved) : []);
-    } catch (error) {
-      console.warn("Invalid favorites in localStorage", error);
-      setFavorites([]);
-    }
-  }, []);
-
-  // Remove from favorites
-  const removeFavorite = (idMeal) => {
-    const updated = favorites.filter((fav) => fav.idMeal !== idMeal);
-    setFavorites(updated);
-    localStorage.setItem("favorites", JSON.stringify(updated));
-  };
+  const { favorites, toggleFavorite } = useFavorites();  
 
   return (
     <div className="min-h-screen bg-gray-50 px-10 py-12">
@@ -36,6 +16,7 @@ const Favorites = () => {
         <Link
           to="/"
           className="px-4 py-2 bg-gray-300 text-white rounded hover:bg-gray-700"
+
         >
           Back to Home
         </Link>
@@ -51,7 +32,9 @@ const Favorites = () => {
             <div key={recipe.idMeal} className="relative group">
               {/* Remove Favorite Button */}
               <button
-                onClick={() => removeFavorite(recipe.idMeal)}
+                // onClick={() => removeFavorite(recipe.idMeal)}
+                onClick={() => toggleFavorite(recipe)}
+
                 className="absolute top-2 right-2 z-10 p-1 rounded-full bg-white shadow hover:scale-110 transition"
               >
                 <SolidHeartIcon className="h-6 w-6 text-red-500" />

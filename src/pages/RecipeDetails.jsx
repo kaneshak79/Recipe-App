@@ -1,6 +1,4 @@
 
-
-
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -21,7 +19,7 @@ const RecipeDetails = () => {
 
   if (!meal) return null;
 
-  /* ---------------- INGREDIENTS ---------------- */
+  
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
     const ingredient = meal[`strIngredient${i}`];
@@ -34,7 +32,7 @@ const RecipeDetails = () => {
     }
   }
 
-  /* ---------------- INSTRUCTIONS (SAFE) ---------------- */
+  
   const instructions = meal?.strInstructions
     ? meal.strInstructions
         .split(/\r\n|\n/)
@@ -42,8 +40,11 @@ const RecipeDetails = () => {
     : [];
 
   return (
-    <div className="w-full min-h-screen overflow-x-hidden bg-gradient-to-br from-indigo-950 via-purple-900 to-violet-800 text-white pb-24">
+   
 
+<div className="w-full min-h-screen overflow-x-hidden 
+bg-gradient-to-br from-indigo-900 via-purple-800 to-violet-700 
+text-white pb-24 relative">
 
  
 
@@ -51,7 +52,9 @@ const RecipeDetails = () => {
       <div className="px-6 md:px-16 pt-6">
         <button
           onClick={() => navigate(-1)}
-          className="text-sm text-violet-600 hover:text-gray-400 transition"
+        //   className="text-sm text-violet-600 hover:text-gray-400 transition"
+        className="text-sm text-violet-300 hover:text-gray-400 transition"
+
         >
           ← Back to recipes
         </button>
@@ -84,13 +87,7 @@ const RecipeDetails = () => {
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {ingredients.map((item, i) => (
-                // <li
-                //   key={i}
-                //   className="flex items-center gap-3 bg-white/15 rounded-xl px-4 py-3 text-sm"
-                // >
-                //   <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-                //   {item}
-                // </li>
+               
                 <li
   key={i}
   className="bg-white/15 rounded-xl px-4 py-3 text-sm"
@@ -122,7 +119,9 @@ const RecipeDetails = () => {
               </div>
 
               {/* Step Text */}
-              <p className="text-lg text-white/90 leading-relaxed max-w-4xl">
+              {/* <p className="text-lg text-white/90 leading-relaxed max-w-4xl"> */}
+              <p className="text-lg text-white/90 leading-relaxed w-full">
+
                 {step}
               </p>
             </div>

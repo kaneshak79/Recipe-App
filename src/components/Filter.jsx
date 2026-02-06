@@ -12,10 +12,12 @@ const Filter = ({ setCategory }) => {
   }, []);
 
   return (
+   
     <select
-      className="p-3 border rounded-lg shadow"
-      onChange={(e) => setCategory(e.target.value)}
-    >
+  className="p-3 border border-gray-200 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400"
+  onChange={(e) => setCategory(e.target.value)}
+>
+
       <option value="">All Categories</option>
 
       {categories.map((cat) => (

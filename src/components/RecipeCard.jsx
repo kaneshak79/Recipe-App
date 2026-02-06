@@ -13,13 +13,18 @@ const RecipeCard = ({ recipe }) => {
           <h2 className="font-semibold text-lg">
             {recipe.strMeal}
           </h2>
-          <p className="text-sm text-gray-500">
-            {recipe.strCategory}
-          </p>
+          
+          {recipe.strCategory && (
+  <p className="text-sm text-gray-500">
+    {recipe.strCategory}
+  </p>
+)}
+
         </div>
       </div>
     </Link>
-  );
+);
 };
+
 
 export default RecipeCard;

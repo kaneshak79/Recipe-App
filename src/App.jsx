@@ -3,9 +3,11 @@ import Home from "./pages/Home";
 import RecipeDetails from "./pages/RecipeDetails";
 import Favorites from "./pages/Favorites";
 import Navbar from "./components/Navbar";
+import { FavoritesProvider } from "./context/FavoritesContext";
 
 function App() {
   return (
+    <FavoritesProvider>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -14,6 +16,7 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </BrowserRouter>
+    </FavoritesProvider>
   );
 }
 
