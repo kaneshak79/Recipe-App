@@ -134,9 +134,13 @@ Remove favorites directly from the page.
 The app consumes endpoints from TheMealDB API:
 
 Endpoint	Description	Example
+
 /search.php?s={query}	Search meals by name or keyword	/search.php?s=chicken
+
 /filter.php?c={category}	Filter meals by category	/filter.php?c=Seafood
+
 /lookup.php?i={id}	Get full meal details by ID	/lookup.php?i=52772
+
 /categories.php	Fetch all meal categories	/categories.php
 
 
